@@ -3,6 +3,7 @@ const path = require('path');
 const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
 const expressSession = require('express');
+const registrationRouter = require('/routes/registration')
 
 const PORT = process.env.PORT || 3000;
 
@@ -32,3 +33,7 @@ app.listen(PORT, () => {
   // eslint-disable-next-line no-console
   console.log('Hello server', PORT);
 });
+
+
+// Подключение роута /registration
+app.use('/registration', registrationRouter);
