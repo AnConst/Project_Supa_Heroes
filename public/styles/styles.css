@@ -1,0 +1,88 @@
+.colorbutton {
+  background-color: rgb(233, 212, 21);
+}
+.greatcontainer{
+  margin: 8% 0%;
+  /* position: relative; */
+  display: flex;
+  /* align-content: center; */
+  flex-direction: row;
+  /* flex-wrap: no-wrap; */
+  /* justify-content: center; */
+  align-items: center;
+  width: 70%;
+  height: 100%;
+  /* background-color: aqua; */
+}
+
+img {
+  /* overflow: hidden; */
+  position: absolute;
+  bottom: 0;
+  /* top: 43.7%;
+  left: 18.9%; */
+  /* width: 30.8%;
+  height: auto; */
+  width: 400px;
+  height: 500px;
+  /* margin: 15% 10%; */
+  /* -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  max-height: 100%;
+  max-width: 100%; */
+}
+.photocontainer{
+/* width: 25%; */
+/* padding: 4%; */
+height: fit-content;
+margin-right: 5%;
+/* margin-top: 8%; */
+}
+
+.validationcontainer{
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  padding: 2%;
+  width: 350px;
+  height: 450px;
+  /* margin-left: 10%; */
+  /* margin-top: 8%; */
+  background-color: rgb(233, 212, 21);
+  background: #1C6EA4;
+background: -moz-linear-gradient(top, rgb(233, 212, 21) 0%, rgb(233, 212, 21) 30%, #1a6608 100%);
+background: -webkit-linear-gradient(top, rgb(233, 212, 21) 0%, rgb(233, 212, 21) 30%, #1a6608 100%);
+background: linear-gradient(to bottom, rgb(233, 212, 21) 0%, rgb(233, 212, 21) 30%, #1a6608 100%);
+}
+
+.title{
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  padding: 2%;
+  width: 400px;
+  height: 450px;
+}
+
+.head{
+color: rgb(233, 212, 21);
+border: rgb(29, 29, 116);
+font-size: 40px;
+font-family: fantasy;
+text-shadow: 10px lavender;
+}
+
+.form-label{
+  font-size: 20px;
+  font-weight: bold;
+}
+.navbar-brand{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+body{
+  background-image: url("/img/1614131699_2-p-fon-s-supergeroyami-marvel-2.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}

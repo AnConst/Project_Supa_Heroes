@@ -28,6 +28,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
 
+// убрать перед заливкой
+app.get('/', (req, res) => {
+  res.render('autorisation');
+});
+
 app.listen(PORT, () => {
   // eslint-disable-next-line no-console
   console.log('Hello server', PORT);
