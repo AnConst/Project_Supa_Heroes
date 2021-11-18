@@ -3,7 +3,7 @@ const path = require('path');
 // const Sequelize = require('sequelize');
 const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
-const expressSession = require('express');
+const session = require('express-session');
 
 const registrationRouter = require('./routes/registration');
 
@@ -28,11 +28,11 @@ app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.use(morgan('dev'));
-app.use(expressSession(sessionConfig));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
+app.use(session(sessionConfig));
 
 // app.use('/login', loginRouter);
 
