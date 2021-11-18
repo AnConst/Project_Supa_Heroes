@@ -1,28 +1,28 @@
 const express = require('express');
 const path = require('path');
-// const Sequelize = require('sequelize');
 const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
+const expressSession = require('express-session');
+const FileStore = require('session-file-store')(expressSession);
+const dotenv = require('dotenv').config();
 const session = require('express-session');
 
 const registrationRouter = require('./routes/registration');
-
-// const registrationRouter = require('/routes/registration');
+const loginRouter = require('./routes/login');
+const indexRouter = require('./routes/index');
 
 const PORT = process.env.PORT || 3000;
 
 const app = express();
 const sessionConfig = {
+  store: new FileStore(),
   name: 'super_hero',
-  secret: 'hello',
+  secret: 'ahaha',
   resave: false,
   saveUnitialized: false,
   cookie: {
-    maxAge: 1000 * 60 * 60 * 24 * 14,
-    httpOnly: true,
   },
 };
-// const loginRouter = require('./routes/login');
 
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
@@ -34,16 +34,11 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(session(sessionConfig));
 
-// app.use('/login', loginRouter);
-
-app.get('/', (req, res) => {
-  res.render('index');
-});
+app.use('/registration', registrationRouter);
+app.use('/login', loginRouter);
+app.use('/', indexRouter);
 
 app.listen(PORT, () => {
   // eslint-disable-next-line no-console
   console.log('Hello server', PORT);
 });
-
-// Подключение роута /registration
-// app.use('/registration', registrationRouter);
