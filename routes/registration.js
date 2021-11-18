@@ -1,13 +1,13 @@
+const router = require('express').Router();
 const { User } = require('../db/models');
-const regRouter = require('express').Router();
 
 router.get('/', (req, res) => {
-  res.render('/registration');
+  res.render('registration');
 });
 
 router.post('/', async (req, res) => {
   const { login, email, password } = req.body;
-  const user_registration = await User.create({
+  const userRegistration = await User.create({
     login,
     email,
     password,
@@ -16,4 +16,4 @@ router.post('/', async (req, res) => {
   res.redirect('/login');
 });
 
-module.exports = regRouter;
+module.exports = router;
