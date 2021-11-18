@@ -38,6 +38,7 @@ router
     req.session.user = {
       login: user.login,
       id: user.id,
+      favorite: [],
     };
     req.session.isAuthorized = true;
     if (user) {
