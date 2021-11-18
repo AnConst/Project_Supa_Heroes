@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const expressSession = require('express-session');
 const FileStore = require('session-file-store')(expressSession);
 const dotenv = require('dotenv').config();
+const session = require('express-session');
 
 const registrationRouter = require('./routes/registration');
 const loginRouter = require('./routes/login');
@@ -27,11 +28,11 @@ app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.use(morgan('dev'));
-app.use(expressSession(sessionConfig));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
+app.use(session(sessionConfig));
 
 app.use('/registration', registrationRouter);
 app.use('/login', loginRouter);
