@@ -4,7 +4,6 @@ const path = require('path');
 const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
 const expressSession = require('express');
-
 const registrationRouter = require('./routes/registration');
 
 // const registrationRouter = require('/routes/registration');
@@ -37,7 +36,7 @@ app.use(cookieParser());
 // app.use('/login', loginRouter);
 
 app.get('/', (req, res) => {
-  res.render('index');
+  res.render('main');
 });
 
 app.listen(PORT, () => {
