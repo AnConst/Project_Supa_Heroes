@@ -20,21 +20,21 @@
   </div>
 
   <div class="validationcontainer">
-    <form>
+    <form id='formReg' name='nameReg'>
       <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label"  style="color:#0d6efd;">Позывной</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">Как тебя называть</div>
+      <label for="exampleInputEmail1" class="form-label" style="color:#0d6efd;">Позывной</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" name='login' aria-describedby="loginlHelp">
+      <div id="loginlHelp" class="form-text">Как тебя называть</div>
     </div>
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label" style="color:#0d6efd;">Почтовые координаты</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input type="email" class="form-control" id="exampleInputEmail1" name='email'aria-describedby="emailHelp">
         <div id="emailHelp" class="form-text">Нам нужно знать, где тебя искать</div>
       </div>
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label" style="color:#0d6efd;">Идентификатор</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
-        <div id="emailHelp" class="form-text" style="color:#ffffff;">Мы все равно узнаем пароль</div>
+        <input type="password" class="form-control" id="exampleInputPassword1" name='password'>
+        <div id="paswordlHelp" class="form-text" style="color:#ffffff;">Мы все равно узнаем пароль</div>
       </div>
       <button type="submit" class="btn btn-primary">Теперь ты один из нас!</button>
     </form>
