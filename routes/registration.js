@@ -13,7 +13,8 @@ router.post('/', async (req, res) => {
     password,
   });
 
-  res.redirect('/login');
+  // res.redirect('/login');
+  res.json({ isRegistered: true });
 });
 
 module.exports = router;

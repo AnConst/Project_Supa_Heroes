@@ -16,19 +16,19 @@
 
 {{!-- Валидация --}}
   <div class="photocontainer">
-    <img src="/img/улыбка.PNG"/>
+    <img src="/img/улыбка.png"/>
   </div>
 
   <div class="validationcontainer">
-    <form>
+    <form id='logForm'>
       <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label"  style="color:#0d6efd;">Позывной</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">Напомни, как тебя зовут</div>
+      <input type="login" class="form-control" id="exampleInputEmail1" name='login' aria-describedby="loginlHelp">
+      <div id="loginHelp" class="form-text">Напомни, как тебя зовут</div>
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label" style="color:#0d6efd;">Идентификатор</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
-        <div id="emailHelp" class="form-text" style="color:#ffffff;">Пароль не забыл?</div>
+        <input type="password" class="form-control" name='password' id="exampleInputPassword1">
+        <div id="passwordHelp" class="form-text" style="color:#ffffff;">Пароль не забыл?</div>
       </div>
       <button type="submit" class="btn btn-primary">Время действовать!</button>
     </form>
