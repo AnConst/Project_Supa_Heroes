@@ -1,9 +1,10 @@
 const express = require('express');
 const path = require('path');
+// const Sequelize = require('sequelize');
 const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
 const expressSession = require('express');
-const registrationRouter = require('/routes/registration')
+const registrationRouter = require('./routes/registration');
 
 
 const PORT = process.env.PORT || 3000;
