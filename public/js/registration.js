@@ -1,6 +1,5 @@
 // const { post } =  require('../../routes');
 
-
 // const regForm = document.querySelector('.formRegistration');
 
 // regForm.addEventListener('submit', async (event) => {
@@ -18,24 +17,25 @@
 //   const responseJson = await response.json();
 // });
 
-
 // const { post } =  require('../../routes');
 
-
-
-
-formRegistration?.addEventListener('submit', async (event) => {
+const formReg = document.querySelector('#formReg');
+formReg?.addEventListener('submit', async (event) => {
   event.preventDefault();
-  const response = await fetch ('/registration', {
-    method: 'POST', 
+  const response = await fetch('/registration', {
+    method: 'POST',
     headers: {
-      'Content-Type' : 'application/json'
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ 
-      login:event.target.login.value,
-      email:event.target.login.email,
-      password:event.target.login.password,  
+    body: JSON.stringify({
+      login: event.target.login.value,
+      email: event.target.email.value,
+      password: event.target.password.value,
     }),
   });
   const responseJson = await response.json();
+  console.log(responseJson);
+  if (responseJson.isRegistered) {
+    window.location.href = 'http://localhost:3000/login';
+  }
 });

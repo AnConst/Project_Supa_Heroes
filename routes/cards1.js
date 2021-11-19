@@ -3,21 +3,17 @@ const express = require('express');
 const router = express.Router();
 const { Hero } = require('../db/models');
 
-router.get('/', (req, res) => {
-  res.render('cards');
-});
 router.post('/', async (req, res) => {
-  const { nameH } = req.body;
+  const { nameH1 } = req.body;
   // try {
   const hero = await Hero.findOne({
     where: {
-      name: nameH,
+      name: nameH1,
     },
     raw: true,
   });
     // kogda loginitsya pervij raz napisatj req.session.user = user bla-bla
   const heroes = [];
-  console.log(hero);
 
   req.session.heroes = heroes;
   req.session.heroes.push(hero);
