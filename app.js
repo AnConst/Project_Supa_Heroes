@@ -44,7 +44,7 @@ app.use('/registration', registrationRouter);
 app.use('/login', loginRouter);
 app.use('/', indexRouter);
 app.use('/cards', cardsRouter);
-// app.use('/cards1', cards1Router);
+app.use('/cards1', cards1Router);
 app.use('/team', teamRouter);
 app.use('/deleteCard', deleteCardRouter);
 app.use('/logout', logoutRouter);
