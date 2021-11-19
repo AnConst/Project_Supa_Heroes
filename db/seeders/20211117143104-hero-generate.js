@@ -30,7 +30,7 @@ module.exports = {
         UserId: '1',
         createdAt: new Date(),
         updatedAt: new Date(),
-      },
+      }, 
       {
         name: 'MrЧесотка',
         superpower: 'Оксана (ногти) +7964******',
