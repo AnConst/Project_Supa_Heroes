@@ -15,6 +15,8 @@ const cardsRouter = require('./routes/cards');
 const cards1Router = require('./routes/cards1');
 const teamRouter = require('./routes/team');
 const deleteCardRouter = require('./routes/deleteCard');
+const logoutRouter = require('./routes/logout');
+
 
 const PORT = process.env.PORT || 3000;
 
@@ -46,6 +48,7 @@ app.use('/cards', cardsRouter);
 app.use('/cards1', cards1Router);
 app.use('/team', teamRouter);
 app.use('/deleteCard', deleteCardRouter);
+app.use('/logout', logoutRouter);
 
 app.listen(PORT, () => {
   // eslint-disable-next-line no-console
