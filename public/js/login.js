@@ -1,19 +1,23 @@
-login?.addEventListener("submit", async (event)=> {
+const login = document.querySelector('#logForm');
+login?.addEventListener('submit', async (event) => {
   event.preventDefault();
   const response = await fetch('/login', {
-    method: "POST",
+    method: 'POST',
     headers: {
-      "Content-type": "application/json"
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      email: event.target.ИМЯМЕЙЛАХБС.value,
-      password: event.target.ИМЯПАРОЛЯХБС.value,
+      login: event.target.login.value,
+      password: event.target.password.value,
     }),
   });
   const jsonResponse = await response.json();
-  if (jsonResponse.users === true) {
-    window.location.href = "/cards";
+  // console.log(jsonResponse)
+  if (jsonResponse.login) {
+    window.location.href = '/cards';
+    alert('ura!');
   } else {
-    window.location.href = "/registration";
+    window.location.href = 'http://localhost:3000/login';
+    alert('Введенные данные не верны! Повторите попытку или зарегистрируйтесь');
   }
-})
+});
