@@ -18,8 +18,10 @@ router.post('/', async (req, res) => {
     // kogda loginitsya pervij raz napisatj req.session.user = user bla-bla
   const heroes = [];
   console.log(hero);
-
+  
+  if (!req.session.heroes) {
   req.session.heroes = heroes;
+  }
   req.session.heroes.push(hero);
 
   // req.session.save((error) => {
