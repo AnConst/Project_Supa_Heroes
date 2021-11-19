@@ -22,6 +22,6 @@ deleteCard.addEventListener('click', async (event) => {
   // Сделать проверку при неудачной регистрации
   if (jsonResponse.deleted) {
     alert('Герой удалён!');
-    window.location.href = '/';
+    window.location.href = '/team';
   }
 });
