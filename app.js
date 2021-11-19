@@ -36,20 +36,18 @@ app.set('views', path.join(__dirname, 'views'));
 // app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
-// app.use(express.json());
-// app.use(cookieParser());
-// app.use(session(sessionConfig));
-app.get('/', (req, res) => {
-  res.render('finalteam');
-});
-// app.use('/registration', registrationRouter);
-// app.use('/login', loginRouter);
-// app.use('/', indexRouter);
-// app.use('/cards', cardsRouter);
-// app.use('/cards1', cards1Router);
-// app.use('/team', teamRouter);
-// app.use('/deleteCard', deleteCardRouter);
-// app.use('/logout', logoutRouter);
+app.use(express.json());
+app.use(cookieParser());
+app.use(session(sessionConfig));
+
+app.use('/registration', registrationRouter);
+app.use('/login', loginRouter);
+app.use('/', indexRouter);
+app.use('/cards', cardsRouter);
+app.use('/cards1', cards1Router);
+app.use('/team', teamRouter);
+app.use('/deleteCard', deleteCardRouter);
+app.use('/logout', logoutRouter);
 app.listen(PORT, () => {
   // eslint-disable-next-line no-console
   console.log('Hello server', PORT);
