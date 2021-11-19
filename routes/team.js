@@ -4,7 +4,9 @@ const router = express.Router();
 // const { Hero } = require('../db/models');
 
 router.get('/', (req, res) => {
-  res.render('team');
+  const { heroes } = req.session;
+  console.log(heroes);
+  res.render('team', { heroes });
 });
 
 module.exports = router;

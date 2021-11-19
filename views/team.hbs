@@ -1,4 +1,4 @@
-
+{{!-- 
 <div class="teamName" style="width: 300px; height: 400px; background: yellow">{{name}}</div>
 <button class="deleteCard" style="width: 100px; height: 40px; border: 1px solid black">Delete</button>
 
@@ -8,4 +8,17 @@
 {{/each}}
 {{else}}
 
-{{/if}}
+{{/if}} --}}
+
+<div class="cards" style="margin-left: 50px">
+  {{#each heroes}}
+  <div class="card hero" style="width: 14rem; margin: 30px; width: 200px; height: 300px">
+    <img src="{{this.image}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="nameH card-title">{{this.name}}</h5> 
+      <!-- class="card-title" -->
+      <p class="card-text">{{this.superpower}}</p>
+      <button class="btn btn-outline-success me-2 deleteCard" type="button" style="margin-top: 300px">Удалить героя</button>
+    </div>
+  </div>
+  {{/each}}
