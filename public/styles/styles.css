@@ -75,10 +75,10 @@ background: linear-gradient(to bottom, rgb(233, 212, 21) 0%, rgb(233, 212, 21) 3
 }
 
 #clo{
-  top: 120px;
+  top: 110px;
   left: 360px;
   width: 500px;
-  height: 400px;
+  height: 420px;
   position: absolute;
   transform: rotate(10deg);
 }
@@ -87,22 +87,66 @@ background: linear-gradient(to bottom, rgb(233, 212, 21) 0%, rgb(233, 212, 21) 3
 color: rgb(233, 212, 21);
 border: rgb(29, 29, 116);
 font-size: 40px;
-font-family: fantasy;
+font-family: sans-serif;
 }
 
 .textclo{
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 18px;
   position: absolute;
-  top: 20%;
-  left: 29.5%;
+  top: 21%;
+  left: 29%;
   padding: 2%;
-  width: 380px;
+  width: 390px;
   height: 450px;
+  color: #0d6efd  ;
 }
 
 body{
   background-image: url("/img/1614131699_2-p-fon-s-supergeroyami-marvel-2.jpeg");
   background-repeat: no-repeat;
   background-size: 100%;
+}
+/* Футер и прочие расклады */
+.footer {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+  margin-left: 35%;
+	width: 28%;
+	height: 30px;
+  background-color: #1a6608;
+  text-align: center;
+  padding-top: 2px;
+}
+
+a{
+  text-decoration: none;
+}
+/* конец футера */
+
+/* Контейнер для командной странички */
+.teamcont{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 2%;
+}
+
+.card-img-top{
+  height: 300px;
+}
+
+.cards{
+  background-color: aqua;
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+.hero{
+  margin: 10px;
 }
