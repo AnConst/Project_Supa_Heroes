@@ -1,11 +1,11 @@
 const express = require('express');
 const path = require('path');
-const morgan = require('morgan');
+// const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
 
 const expressSession = require('express-session');
 const FileStore = require('session-file-store')(expressSession);
-const dotenv = require('dotenv').config();
+// const dotenv = require('dotenv').config();
 const session = require('express-session');
 
 const registrationRouter = require('./routes/registration');
