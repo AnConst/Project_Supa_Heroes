@@ -11,6 +11,12 @@ const session = require('express-session');
 const registrationRouter = require('./routes/registration');
 const loginRouter = require('./routes/login');
 const indexRouter = require('./routes/index');
+const cardsRouter = require('./routes/cards');
+const cards1Router = require('./routes/cards1');
+const teamRouter = require('./routes/team');
+const deleteCardRouter = require('./routes/deleteCard');
+const logoutRouter = require('./routes/logout');
+
 
 const PORT = process.env.PORT || 3000;
 
@@ -38,7 +44,11 @@ app.use(session(sessionConfig));
 app.use('/registration', registrationRouter);
 app.use('/login', loginRouter);
 app.use('/', indexRouter);
-
+app.use('/cards', cardsRouter);
+app.use('/cards1', cards1Router);
+app.use('/team', teamRouter);
+app.use('/deleteCard', deleteCardRouter);
+app.use('/logout', logoutRouter);
 app.listen(PORT, () => {
   // eslint-disable-next-line no-console
   console.log('Hello server', PORT);
