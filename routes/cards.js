@@ -7,15 +7,16 @@ router.get('/', async (req, res) => {
   const heros = await Hero.findAll({
     raw: true,
   });
-  console.log(heros);
+  // console.log(heros);
   res.render('cards', { heros });
 });
 router.post('/', async (req, res) => {
   const { nameH } = req.body;
+  console.log(nameH);
   // try {
   const hero = await Hero.findOne({
     where: {
-      nameHeroe: nameH,
+      superpower: nameH,
     },
     raw: true,
   });
