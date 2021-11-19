@@ -20,7 +20,7 @@ module.exports = {
       {
         name: 'FatMan',
         superpower: 'Сахарный диабет',
-        UserId: '1',
+        UserId: '1',   
         createdAt: new Date(),
         updatedAt: new Date(),
       },
