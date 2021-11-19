@@ -173,3 +173,22 @@ a{
   background: #1a6608;
   color: white;
 }
+.smyler{
+  border-radius: 6px;
+  background-color: rgb(233, 212, 21);
+  vertical-align: bottom;
+    color: #1a6608;
+    position: absolute;
+	left: 0;
+	bottom: 50px;
+  margin-left: 35%;
+	width: 28%;
+	height: 34px;
+  text-align: center;
+  padding-top: 2px;
+}
+.smyler:hover{
+  cursor: pointer;
+  background: #1a6608;
+  color: white;
+}
