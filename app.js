@@ -28,7 +28,7 @@ const sessionConfig = {
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 
-app.use(morgan('dev'));
+// app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -38,6 +38,7 @@ app.use(session(sessionConfig));
 app.use('/registration', registrationRouter);
 app.use('/login', loginRouter);
 app.use('/', indexRouter);
+
 app.listen(PORT, () => {
   // eslint-disable-next-line no-console
   console.log('Hello server', PORT);
