@@ -9,7 +9,21 @@
 {{else}}
 
 {{/if}} --}}
-<button class="btn btn-outline-success me-2" id="bye" type="button" style="margin-left: 500px; margin-top: 20px; background: yellow; color: red">Покинуть поле боя</button>
+<nav class="navbar navbar-expand-lg navbar-light colorbutton" style="">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/" style="color:#0d6efd;" >Supa heros creator </a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      </ul>
+      <nav class="navbar navbar-light colorbutton">
+  <form class="container-fluid justify-content-start colorbutton">
+    <button class="btn btn-outline-success me-2" id="bye" type="button">Покинуть поле боя</button>
+  </form>
+</nav>
+    </div>
+  </div>
+</nav>
 
 
 <div class="cards" style="margin-left: 50px">
@@ -20,7 +34,11 @@
       <h5 class="nameH card-title">{{this.name}}</h5> 
       <!-- class="card-title" -->
       <p class="card-text">{{this.superpower}}</p>
-      <button class="btn btn-outline-success me-2 deleteCard" type="button" style="margin-top: 300px">Удалить героя</button>
+      <button class="btn btn-outline-success me-2 deleteCard" type="button">Удалить героя</button>
     </div>
   </div>
   {{/each}}
+
+  <div class="footer">
+   <a href="/rooster" style="color:rgb(233, 212, 21);" >2021 // ОАО 'Костромские петушки'</a>
+  </div>  
