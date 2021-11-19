@@ -31,6 +31,11 @@ module.exports = (sequelize, DataTypes) => {
       unique: true,
       type: DataTypes.TEXT,
     },
+    image: {
+      allowNull: false,
+      unique: true,
+      type: DataTypes.TEXT,
+    },
     UserId: {
       allowNull: false,
       type: DataTypes.INTEGER,

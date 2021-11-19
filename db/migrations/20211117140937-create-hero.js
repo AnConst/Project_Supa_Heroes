@@ -17,6 +17,11 @@ module.exports = {
         unique: true,
         type: Sequelize.TEXT,
       },
+      image: {
+        allowNull: false,
+        unique: true,
+        type: Sequelize.TEXT,
+      },
       UserId: {
         autoIncrement: true,
         allowNull: false,

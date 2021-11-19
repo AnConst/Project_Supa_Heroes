@@ -1,4 +1,4 @@
-<div class="heroo" style="margin: 100px; width: 200px; height: 200px; border: 1px solid black">
+{{!-- <div class="heroo" style="margin: 100px; width: 200px; height: 200px; border: 1px solid black">
  <img src="" alt="" class="image">
  <p class="nameH" style="color: white">name</p>
  <p class="superpower" style="color: white">superpower</p>
@@ -13,6 +13,99 @@
 
  </div>
 
- <div class="team"><a href="/team">Komanda</a></div>
+ <div class="team"><a href="/team">Komanda</a></div> --}}
 {{!-- Валидация --}}
+
+<nav class="navbar navbar-expand-lg navbar-light colorbutton" style="">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" style="color:#0d6efd;" >Supa heros creator </a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      </ul>
+      <nav class="navbar navbar-light colorbutton">
+  <form class="container-fluid justify-content-start colorbutton">
+    <button class="btn btn-outline-success me-2" type="button">Покинуть поле боя</button>
+  </form>
+</nav>
+    </div>
+  </div>
+</nav>
+
+<div class="cards" style="margin-left: 50px">
+  {{#each heros}}
+  <div class="card hero" style="width: 14rem; margin: 30px; width: 200px; height: 300px">
+    <img src="{{this.image}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="nameH card-title">{{this.name}}</h5> 
+      <!-- class="card-title" -->
+      <p class="card-text">{{this.superpower}}</p>
+      <button class="btn btn-outline-success me-2 hero1" type="button">Добавить героя</button>
+    </div>
+  </div>
+  {{/each}}
+  {{!-- <div class="card hero" style="width: 14rem;">
+    <img src="/img/ваня.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Иван Миняев</h5>
+      <p class="card-text"> Backend dev, помощник тимлида, суетолог, агрегатор идей.</p>
+      <button class="btn btn-outline-success me-2" type="button">Добавить героя</button>
+    </div>
+  </div> --}}
+  {{!-- <div class="card hero" style="width: 14rem;">
+    <img src="/img/денис.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Денис Боку</h5>
+      <p class="card-text">Backend dev, мастер по роутам и связям с общественностью.</p>
+      <button class="btn btn-outline-success me-2" type="button">Добавить героя</button>
+    </div>
+    </div>
+    <div class="card hero" style="width: 14rem;">
+    <img src="/img/денис.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Денис Боку</h5>
+      <p class="card-text">Backend dev, мастер по роутам и связям с общественностью.</p>
+      <button class="btn btn-outline-success me-2" type="button">Добавить героя</button>
+    </div>
+    </div>
+    <div class="card hero" style="width: 14rem;">
+    <img src="/img/денис.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Денис Боку</h5>
+      <p class="card-text">Backend dev, мастер по роутам и связям с общественностью.</p>
+      <button class="btn btn-outline-success me-2" type="button">Добавить героя</button>
+    </div>
+    </div>
+    <div class="card hero" style="width: 14rem;">
+    <img src="/img/аюша.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Аюша Михайлов</h5>
+      <p class="card-text"> Fullstack dev, созидатель позитива и невероятных идей.</p>
+      <button class="btn btn-outline-success me-2" type="button">Добавить героя</button>
+    </div>
+  </div>
+  <div class="card hero" style="width: 14rem;">
+    <img src="/img/аюша.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Аюша Михайлов</h5>
+      <p class="card-text"> Fullstack dev, созидатель позитива и невероятных идей.</p>
+      <button class="btn btn-outline-success me-2" type="button">Добавить героя</button>
+    </div>
+  </div>
+  <div class="card hero" style="width: 14rem;">
+    <img src="/img/аюша.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Аюша Михайлов</h5>
+      <p class="card-text"> Fullstack dev, созидатель позитива и невероятных идей.</p>
+      <button class="btn btn-outline-success me-2" type="button">Добавить героя</button>
+    </div>
+  </div> 
+</div> --}}
+<div class="teambutton team" type="button" style="margin-left: -900px; margin-top: 600px"><a href="/team">Посмотреть команду</a></div>
+    {{!-- <button class="teambutton team" type="button" style="margin-left: -900px; margin-top: 600px">Создать команду</button> --}}
+
+<div class="footer" 
+   href="#">
+   <a href="#" style="color:rgb(233, 212, 21);" >2021 // ООО 'Костромские петушки'</a>
+  </div>
   

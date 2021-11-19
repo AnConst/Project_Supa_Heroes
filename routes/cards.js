@@ -3,24 +3,29 @@ const express = require('express');
 const router = express.Router();
 const { Hero } = require('../db/models');
 
-router.get('/', (req, res) => {
-  res.render('cards');
+router.get('/', async (req, res) => {
+  const heros = await Hero.findAll({
+    raw: true,
+  });
+  // console.log(heros);
+  res.render('cards', { heros });
 });
 router.post('/', async (req, res) => {
   const { nameH } = req.body;
+  console.log(nameH);
   // try {
   const hero = await Hero.findOne({
     where: {
-      name: nameH,
+      superpower: nameH,
     },
     raw: true,
   });
     // kogda loginitsya pervij raz napisatj req.session.user = user bla-bla
   const heroes = [];
   console.log(hero);
-  
+
   if (!req.session.heroes) {
-  req.session.heroes = heroes;
+    req.session.heroes = heroes;
   }
   req.session.heroes.push(hero);
 
