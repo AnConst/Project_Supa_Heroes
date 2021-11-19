@@ -17,7 +17,9 @@ const teamRouter = require('./routes/team');
 const deleteCardRouter = require('./routes/deleteCard');
 const logoutRouter = require('./routes/logout');
 const roosterRouter = require('./routes/rooster');
-const smylerRouter = require('./routes/smyler');
+const smilerRouter = require('./routes/smiler');
+const newSmilerRouter = require('./routes/newSmiler');
+
 
 const PORT = process.env.PORT || 3000;
 
@@ -51,7 +53,9 @@ app.use('/team', teamRouter);
 app.use('/deleteCard', deleteCardRouter);
 app.use('/logout', logoutRouter);
 app.use('/rooster', roosterRouter);
-app.use('/smyler', smylerRouter);
+app.use('/smiler', smilerRouter);
+app.use('/newSmiler', newSmilerRouter);
+
 app.listen(PORT, () => {
   // eslint-disable-next-line no-console
   console.log('Hello server', PORT);

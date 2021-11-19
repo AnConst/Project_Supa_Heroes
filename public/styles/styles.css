@@ -173,7 +173,7 @@ a{
   background: #1a6608;
   color: white;
 }
-.smyler{
+.smiler{
   border-radius: 6px;
   background-color: rgb(233, 212, 21);
   vertical-align: bottom;
@@ -187,7 +187,7 @@ a{
   text-align: center;
   padding-top: 2px;
 }
-.smyler:hover{
+.smiler:hover{
   cursor: pointer;
   background: #1a6608;
   color: white;

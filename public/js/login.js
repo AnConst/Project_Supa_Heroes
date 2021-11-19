@@ -15,7 +15,7 @@ login?.addEventListener('submit', async (event) => {
   // console.log(jsonResponse)
   if (jsonResponse.login) {
     window.location.href = '/cards';
-    alert('ura!');
+    // alert('ura!');
   } else {
     window.location.href = 'http://localhost:3000/login';
     alert('Введенные данные не верны! Повторите попытку или зарегистрируйтесь');
